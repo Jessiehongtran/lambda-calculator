@@ -1,11 +1,11 @@
 import React from "react";
+import Display from "../../DisplayComponents/Display";
 
 
-const NumberButton = ({number}) => {
+const NumberButton = (props) => {
+  console.log('props in numberbutton', props)
   return (
-    <button> {number}
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </button>
+    <button onClick={() => props.showNumbers(props.number)}>{props.number}</button>
   );
 };
 
